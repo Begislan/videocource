@@ -1,0 +1,47 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Менторы{% endblock %}
+
+{% block content %}
+    {% include 'app/include/header.html' %}
+
+    <div class="container">
+
+
+        <div class="row mb-2">
+
+
+
+
+           {% for data in videos %}
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary-emphasis">{{ data.type }}</strong>
+                            <h3 class="mb-0">{{ data.title }}</h3>
+                            <div class="mb-1 text-body-secondary">{{ data.date }}</div>
+                            <p class="card-text mb-auto">Ментор: {{ data.user }}</p>
+                            <a href="{% url 'video-detail' data.id %}"
+                               class="icon-link gap-1 icon-link-hover stretched-link">
+                                Маалыматты окуу...
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img src="{{ data.img.url }}" class="bd-placeholder-img" width="200" height="250">
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+
+            </p>
+            </div>
+
+
+    </div>
+
+
+    {% include 'app/include/footer.html' %}
+
+{% endblock %}
