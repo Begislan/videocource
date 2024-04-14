@@ -26,7 +26,7 @@
             {% for data in video %}
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
+                        <div style="backdrop-filter: blur(10px)" class="col p-4 d-flex flex-column position-static text-light">
                             <strong class="d-inline-block mb-2 text-primary-emphasis">{{ data.type }}</strong>
                             <h3 class="mb-0">{{ data.title }}</h3>
                             <div class="mb-1 text-body-secondary">{{ data.date }}</div>
@@ -37,7 +37,7 @@
                             </a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
-                            <img src="{{ data.img.url }}" class="bd-placeholder-img" width="200" height="250">
+                            <img src="{{ data.img.url }}" class="bd-placeholder-img" width="200" height="250"  style="object-fit: cover">
                         </div>
                     </div>
                 </div>

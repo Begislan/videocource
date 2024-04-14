@@ -8,18 +8,18 @@
     <center>
     <div class="container">
 
-        <div class="card" style="width: 70%;">
+        <div class="" style="width: 70%;">
             <video class="card-img-top" width="100%" controls controlsList="nodownload">
                 <source src="{{ video.file.url }}" type="video/mp4">
                 <source src="{{ video.file.url }}" type="video/ogg">
 
             </video>
-            <div class="card-body">
-                <h5 class="card-title">{{ video.title }}</h5>
-                <p class="card-text">Описание: {{ video.description}}</p>
-                <p class="card-text">Категория: {{ video.type}}</p>
-                <p class="card-text">Ментор: {{ video.user}}</p>
-                <p class="card-text">Дата выхода: {{ video.date}}</p>
+            <div class="text-light" style="backdrop-filter: blur(10px); border-radius: 10px">
+                <h5 class="">{{ video.title }}</h5>
+                <p class="">Описание: {{ video.description}}</p>
+                <p class="">Категория: <a href="{% url 'category-detail' video.type.id%}">{{ video.type}}</a></p>
+                <p class="">Ментор: <a href="{% url 'mentor-detail' video.user.id %}">{{ video.user}}</a></p>
+                <p class="">Дата выхода: {{ video.date}}</p>
 
             </div>
         </div>

@@ -3,10 +3,119 @@
 {% block title %}Главная страница{% endblock %}
 
 {% block content %}
-    {% include 'app/include/header.html' %}
+{% include 'app/include/header.html' %}
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis"
+         style="backdrop-filter: blur(30px); border: 1px solid white;">
+        <div class="col-lg-12 px-0 text-light">
+            <h1 class="display-4 fst-italic"><b>Программалоо - бул абстракттуу ойлорду машиналарды башкара турган жана
+                дүйнөнү өзгөртө турган конкреттүү көрсөтмөлөргө айландыруу өнөрү</b></h1>
+             </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-8" style="backdrop-filter: blur(20px); border: 1px solid white; border-radius: 10px">
+            <br>
+
+            <article class="blog-post text-light">
+                <h3 class="display-5  mb-1 text-light">Бул тиркеменин максаты</h3>
+
+                <p class="fs-3">Кыргыз тилиндеги видеосабактарды чогултуу жана аларды автоматташтыруу.</p>
+                <hr>
+                <p class="fs-3">Эми студенттер, окуучулар
+                    деги эле программалоо жаатында жаңыдан үйрөнүп баштоочулар бул тиркемеден кеңири пайдаланууга болот.</p>
+                <hr>
+                <h2>Тиркемедеги материалдар</h2>
+                <ul class="fs-4">
+                    <li>Дуйнө жүзүндө популярдуулукка ээ болгон программалоо тилдери</li>
+                    <li>3D жана компьютердик графика</li>
+                    <li>Web-программалоо</li>
+                    <li>Системалык программалоо</li>
+                   <li>Компьютердик сабакттуулук</li>
+                    <li>Офистик программалар</li>
+                </ul>
+                <hr>
+                <h3 class="display-5  mb-1 text-light">Сайтка маалымат чогултуучулар</h3>
+                <p class="fs-4">МФТИТ институнун</p>
+                <ol class="fs-4">
+                    <li>ПИ(б)-1-22</li>
+                    <li>ПИ(б)-2-22р</li>
+                    <li>ПИ(б)-1-22w</li>
+                </ol>
+                <p class="fs-4">тайпалары</p>
 
 
 
-    {% include 'app/include/footer.html' %}
-    
+
+</article>
+
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">Биз жөнүндө</h4>
+                    <p class="mb-0">Customize this section to tell your visitors a little bit about your publication,
+                        writers, content, or something else entirely. Totally up to you.</p>
+                </div>
+
+                <div>
+                    <h4 class="fst-italic">Recent posts</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96"
+                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                     preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <rect width="100%" height="100%" fill="#777"></rect>
+                                </svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Example blog post title</h6>
+                                    <small class="text-body-secondary">January 15, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96"
+                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                     preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <rect width="100%" height="100%" fill="#777"></rect>
+                                </svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">This is another blog post title</h6>
+                                    <small class="text-body-secondary">January 14, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96"
+                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                     preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <rect width="100%" height="100%" fill="#777"></rect>
+                                </svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                                    <small class="text-body-secondary">January 13, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% include 'app/include/footer.html' %}
+
 {% endblock %}

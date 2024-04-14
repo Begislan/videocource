@@ -3,27 +3,30 @@
 {% block title %}Менторы{% endblock %}
 
 {% block content %}
-    {% include 'app/include/header.html' %}
+{% include 'app/include/header.html' %}
 
 <div class="container">
-<div class="row">
-{% for user in user %}
+    <div class="row">
+        <center>
 
-    <div class="card col-md-3 me-2 mb-2" >
-        <img src="{{user.img.url}}" width="100%" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{ user.username}}</h5>
-            <p class="card-text">{{ user.role}}</p>
-            <a href="{% url 'mentor-detail' user.id %}">Видеолор...</a>
-        </div>
+            <div class="row" style="backdrop-filter: blur(10px);">
+                <br><br>
+                {% for user in user %}
+                <div class="col-lg-4 text-light">
+                    <img src="{{user.img.url}}" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                         style="object-fit: cover;">
+                    <h2 class="fw-normal">{{ user.username}}</h2>
+                    <p>{{ user.role}}</p>
+                    <p><a class="btn btn-secondary" href="{% url 'mentor-detail' user.id %}">Видеолор...</a></p>
+                </div>
+                {% endfor %}
+            </div>
+        </center>
     </div>
 
-{% endfor %}
-</div>
-
 </div>
 
 
-    {% include 'app/include/footer.html' %}
+{% include 'app/include/footer.html' %}
 
 {% endblock %}
