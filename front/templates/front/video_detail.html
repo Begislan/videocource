@@ -1,0 +1,52 @@
+{% extends 'front/base.html' %}
+{% block title %}{{ video.title }}{% endblock %}
+{% block content %}
+    {% load static %}
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>{{ video.type }}</h6>
+                    <h2>{{ video.title }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="meetings-page" id="meetings">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                        <div class="col-lg-8" style="margin-left: 17%">
+                             <div class="meeting-single-item">
+                                <div class="thumb">
+                                    <div class="price">
+                                        <span>{{ video.type }}</span>
+                                    </div>
+                                    <div class="date">
+                                        <h6> {{ video.date }}<span>Дата</span></h6>
+                                    </div>
+                                    <video class="card-img-top" width="100%" controls controlsList="nodownload">
+                                        <source src="{{ video.file.url }}" type="video/mp4">
+                                        <source src="{{ video.file.url }}" type="video/ogg">
+
+                                    </video>
+                                </div>
+                                <div class="down-content">
+                                    <a href="{% url 'user_detail' video.user.id %}"><h4>Пользователь: {{ video.user }}</h4></a>
+                                    <p>Описание: {{ video.description }}</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        {% include 'front/include/footer.html' %}
+    </section>
+
+{% endblock %}

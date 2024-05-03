@@ -16,10 +16,10 @@
             </video>
             <div class="text-light" style="backdrop-filter: blur(10px); border-radius: 10px">
                 <h5 class="">{{ video.title }}</h5>
-                <p class="">Описание: {{ video.description}}</p>
-                <p class="">Категория: <a href="{% url 'category-detail' video.type.id%}">{{ video.type}}</a></p>
+                <p class="">Кыскача: {{ video.description}}</p>
+                <p class="">Категориясы: <a href="{% url 'category-detail' video.type.id%}">{{ video.type}}</a></p>
                 <p class="">Ментор: <a href="{% url 'mentor-detail' video.user.id %}">{{ video.user}}</a></p>
-                <p class="">Дата выхода: {{ video.date}}</p>
+                <p class="">Чыккан датасы: {{ video.date}}</p>
 
             </div>
         </div>
